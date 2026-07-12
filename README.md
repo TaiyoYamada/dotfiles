@@ -8,8 +8,8 @@ Karabiner-Elements, and Neovim (LazyVim).
 Install Homebrew, then clone and bootstrap the repository:
 
 ```sh
-git clone git@github.com:TaiyoYamada/dotfiles.git ~/dotfiles
-cd ~/dotfiles
+git clone git@github.com:TaiyoYamada/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
 ./bootstrap.sh
 ```
 
@@ -31,5 +31,5 @@ file is tracked by this repository.
 Edit `Brewfile`, then run:
 
 ```sh
-brew bundle --file ~/dotfiles/Brewfile
+brew bundle --file ~/.dotfiles/Brewfile
 ```
