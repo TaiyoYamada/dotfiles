@@ -1,12 +1,10 @@
 # Keep PATH entries unique while allowing path=(...) additions below.
 typeset -U path PATH
 
-path=(
-  "$HOME/.local/bin"
-  "$HOME/.mint/bin"
-  "$HOME/.npm-global/bin"
-  "$path[@]"
-)
+for bin_dir in "$HOME/.npm-global/bin" "$HOME/.mint/bin" "$HOME/.local/bin"; do
+  [[ -d "$bin_dir" ]] && path=("$bin_dir" "$path[@]")
+done
+unset bin_dir
 
 export PNPM_HOME="${PNPM_HOME:-$HOME/Library/pnpm}"
 [[ -d "$PNPM_HOME" ]] && path=("$PNPM_HOME" "$path[@]")
