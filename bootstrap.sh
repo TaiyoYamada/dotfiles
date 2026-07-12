@@ -9,3 +9,5 @@ fi
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 brew bundle --file "$DOTFILES_DIR/Brewfile"
 "$DOTFILES_DIR/install.sh"
+"$DOTFILES_DIR/vscode/install-extensions.sh"
+"$DOTFILES_DIR/macos/defaults.sh"

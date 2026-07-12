@@ -1,0 +1,16 @@
+name: Check
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  dotfiles:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Validate configuration
+        run: ./check.sh

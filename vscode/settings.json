@@ -1,0 +1,8 @@
+{
+  "editor.suggestOnTriggerCharacters": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "geminicodeassist.displayInlineContextHint": false,
+  "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
+  "workbench.colorTheme": "Dark Modern"
+}

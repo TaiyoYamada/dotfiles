@@ -4,6 +4,8 @@ set -euo pipefail
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 BACKUP_DIR="$HOME/.dotfiles-backup/$(date +%Y%m%d-%H%M%S)"
 BACKUP_CREATED=false
+CURRENT_GIT_NAME="$(git config --global --get user.name 2>/dev/null || true)"
+CURRENT_GIT_EMAIL="$(git config --global --get user.email 2>/dev/null || true)"
 
 backup_and_link() {
   local source="$1"
@@ -41,10 +43,18 @@ backup_and_link "$DOTFILES_DIR/config/wezterm/wezterm.lua" "$HOME/.config/wezter
 backup_and_link "$DOTFILES_DIR/config/wezterm/keybinds.lua" "$HOME/.config/wezterm/keybinds.lua"
 backup_and_link "$DOTFILES_DIR/config/karabiner/karabiner.json" "$HOME/.config/karabiner/karabiner.json"
 backup_and_link "$DOTFILES_DIR/config/nvim" "$HOME/.config/nvim"
+backup_and_link "$DOTFILES_DIR/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
 
 if [[ ! -f "$HOME/.gitconfig.local" ]]; then
-  cp "$DOTFILES_DIR/templates/.gitconfig.local.example" "$HOME/.gitconfig.local"
-  printf 'Created: %s (edit your Git identity)\n' "$HOME/.gitconfig.local"
+  if [[ -n "$CURRENT_GIT_NAME" || -n "$CURRENT_GIT_EMAIL" ]]; then
+    touch "$HOME/.gitconfig.local"
+    [[ -n "$CURRENT_GIT_NAME" ]] && git config --file "$HOME/.gitconfig.local" user.name "$CURRENT_GIT_NAME"
+    [[ -n "$CURRENT_GIT_EMAIL" ]] && git config --file "$HOME/.gitconfig.local" user.email "$CURRENT_GIT_EMAIL"
+    printf 'Preserved Git identity in: %s\n' "$HOME/.gitconfig.local"
+  else
+    cp "$DOTFILES_DIR/templates/.gitconfig.local.example" "$HOME/.gitconfig.local"
+    printf 'Created: %s (edit your Git identity)\n' "$HOME/.gitconfig.local"
+  fi
 fi
 
 if [[ ! -f "$HOME/.zshrc.local" ]]; then
