@@ -7,6 +7,49 @@ alias ll='ls -lah'
 
 command -v lazygit >/dev/null 2>&1 && alias lg='lazygit'
 
+# Dotfiles and files
+alias dots='cd ~/.dotfiles'
+alias dotcheck='~/.dotfiles/check.sh'
+alias la='ls -la'
+alias lt='tree -L 2'
+alias c.='code .'
+alias v='nvim'
+
+# Git and GitHub
+alias ga='git add'
+alias gd='git diff'
+alias gds='git diff --staged'
+alias gc='git commit'
+alias gp='git push'
+alias gpl='git pull'
+alias gb='git branch'
+alias gsw='git switch'
+alias gr='git restore'
+alias prs='gh pr status'
+alias prv='gh pr view --web'
+alias prc='gh pr create --web'
+alias issues='gh issue list'
+
+# Development tools
+alias dc='docker compose'
+alias tf='terraform'
+alias tff='terraform fmt -recursive'
+alias tfp='terraform plan'
+alias py='uv run python'
+
+mkcd() {
+  if (( $# != 1 )); then
+    print -u2 -- 'Usage: mkcd <directory>'
+    return 2
+  fi
+
+  mkdir -p -- "$1" && cd -- "$1"
+}
+
+repo() {
+  gh repo view --web
+}
+
 # JavaScript package scripts
 alias nd='npm run dev'
 alias nb='npm run build'
