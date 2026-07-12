@@ -1,0 +1,24 @@
+{
+    "profiles": [
+        {
+            "devices": [
+                {
+                    "description": "Corne v4",
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 4,
+                        "vendor_id": 18003
+                    },
+                    "keyboard_type": "ansi"
+                }
+            ],
+            "name": "Default profile",
+            "selected": true,
+            "virtual_hid_keyboard": { "keyboard_type_v2": "jis" }
+        },
+        {
+            "name": "US",
+            "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
+        }
+    ]
+}

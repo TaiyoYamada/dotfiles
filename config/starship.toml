@@ -1,0 +1,69 @@
+add_newline = false
+
+format = """
+[](fg:#7dcfff)\
+$username\
+[](fg:#7dcfff bg:#bb9af7)\
+$directory\
+[](fg:#bb9af7 bg:#f7768e)\
+$git_branch\
+[](fg:#f7768e)\
+$character
+"""
+
+right_format = """
+$cmd_duration
+$time
+"""
+
+[username]
+show_always = true
+format = "[  $user ]($style)"
+style_user = "fg:#1a1b26 bg:#7dcfff"
+style_root = "fg:#1a1b26 bg:#7dcfff"
+
+[directory]
+format = "[  $path ]($style)"
+style = "fg:#1a1b26 bg:#bb9af7"
+truncate_to_repo = true
+truncation_length = 3
+home_symbol = "~"
+
+[git_branch]
+symbol = " "
+format = "[ $symbol$branch ]($style)"
+style = "fg:#1a1b26 bg:#f7768e"
+truncation_length = 20
+
+[character]
+success_symbol = "[❯](bold #9ece6a)"
+error_symbol = "[❯](bold #f7768e)"
+
+[cmd_duration]
+min_time = 300
+format = "[ $duration ]($style)"
+style = "fg:#565f89"
+
+[time]
+disabled = false
+format = "[ $time ]($style)"
+style = "fg:#565f89"
+time_format = "%H:%M:%S"
+utc_time_offset = "+9"
+
+[git_status]
+disabled = true
+[aws]
+disabled = true
+[conda]
+disabled = true
+[python]
+disabled = true
+[rust]
+disabled = true
+[lua]
+disabled = true
+[direnv]
+disabled = true
+[os]
+disabled = true
