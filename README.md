@@ -1,7 +1,8 @@
 # dotfiles
 
 Personal macOS development environment for Zsh, Git, Starship, WezTerm,
-Karabiner-Elements, Neovim (LazyVim), VS Code, and macOS defaults.
+Karabiner-Elements, Neovim (LazyVim), VS Code, lazygit, gh, Claude Code,
+and macOS defaults. Shell tooling includes fzf, zoxide, and git-delta.
 
 ## Setup
 
@@ -35,6 +36,10 @@ file is tracked by this repository.
 
 VS Code settings intentionally exclude temporary paths, account data, and
 project identifiers. The extension list is stored in `vscode/extensions.txt`.
+
+Only `config.yml` is tracked for gh; `~/.config/gh/hosts.yml` holds
+authentication tokens and stays out of the repository. Git uses delta as
+its pager, so `git-delta` (installed via the Brewfile) is expected on PATH.
 
 ## Update packages
 

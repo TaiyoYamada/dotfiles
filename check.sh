@@ -8,6 +8,9 @@ bash -n install.sh bootstrap.sh check.sh vscode/install-extensions.sh macos/defa
 zsh -n zsh/.zprofile zsh/.zshrc zsh/aliases.zsh
 ruby -rjson -e 'JSON.parse(File.read(ARGV.fetch(0)))' config/karabiner/karabiner.json
 ruby -rjson -e 'JSON.parse(File.read(ARGV.fetch(0)))' vscode/settings.json
+ruby -rjson -e 'JSON.parse(File.read(ARGV.fetch(0)))' claude/settings.json
+ruby -ryaml -e 'YAML.safe_load(File.read(ARGV.fetch(0)))' config/gh/config.yml
+ruby -ryaml -e 'YAML.safe_load(File.read(ARGV.fetch(0)))' config/lazygit/config.yml
 
 if command -v luac >/dev/null 2>&1; then
   while IFS= read -r -d '' file; do

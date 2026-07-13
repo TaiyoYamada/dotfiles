@@ -43,6 +43,9 @@ backup_and_link "$DOTFILES_DIR/config/wezterm/wezterm.lua" "$HOME/.config/wezter
 backup_and_link "$DOTFILES_DIR/config/wezterm/keybinds.lua" "$HOME/.config/wezterm/keybinds.lua"
 backup_and_link "$DOTFILES_DIR/config/karabiner/karabiner.json" "$HOME/.config/karabiner/karabiner.json"
 backup_and_link "$DOTFILES_DIR/config/nvim" "$HOME/.config/nvim"
+backup_and_link "$DOTFILES_DIR/config/lazygit/config.yml" "$HOME/Library/Application Support/lazygit/config.yml"
+backup_and_link "$DOTFILES_DIR/config/gh/config.yml" "$HOME/.config/gh/config.yml"
+backup_and_link "$DOTFILES_DIR/claude/settings.json" "$HOME/.claude/settings.json"
 backup_and_link "$DOTFILES_DIR/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
 
 if [[ ! -f "$HOME/.gitconfig.local" ]]; then
