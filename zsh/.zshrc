@@ -22,5 +22,11 @@ source "$HOME/.config/zsh/aliases.zsh"
 
 command -v starship >/dev/null 2>&1 && eval "$(starship init zsh)"
 
+# fzf: Ctrl+R history search, Ctrl+T file search, Alt+C directory jump.
+command -v fzf >/dev/null 2>&1 && source <(fzf --zsh)
+
+# zoxide: smarter cd; jump with `z <keyword>`.
+command -v zoxide >/dev/null 2>&1 && eval "$(zoxide init zsh)"
+
 # Machine-specific settings and secrets belong here, outside Git.
 [[ -f "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
