@@ -4,5 +4,17 @@
   "explorer.confirmDragAndDrop": false,
   "geminicodeassist.displayInlineContextHint": false,
   "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
-  "workbench.colorTheme": "Dark Modern"
+  "workbench.colorTheme": "Dark Modern",
+  "chat.instructionsFilesLocations": {
+    ".github/instructions": true,
+    ".claude/rules": true,
+    "~/.copilot/instructions": true,
+    "~/.claude/rules": true,
+    "/var/folders/29/xbyl9pd540bgdh671qg6grhm0000gn/T/postman-collections-post-response.instructions.md": true,
+    "/var/folders/29/xbyl9pd540bgdh671qg6grhm0000gn/T/postman-collections-pre-request.instructions.md": true,
+    "/var/folders/29/xbyl9pd540bgdh671qg6grhm0000gn/T/postman-folder-post-response.instructions.md": true,
+    "/var/folders/29/xbyl9pd540bgdh671qg6grhm0000gn/T/postman-folder-pre-request.instructions.md": true,
+    "/var/folders/29/xbyl9pd540bgdh671qg6grhm0000gn/T/postman-http-request-post-response.instructions.md": true,
+    "/var/folders/29/xbyl9pd540bgdh671qg6grhm0000gn/T/postman-http-request-pre-request.instructions.md": true
+  }
 }
