@@ -16,5 +16,9 @@
     "/var/folders/29/xbyl9pd540bgdh671qg6grhm0000gn/T/postman-folder-pre-request.instructions.md": true,
     "/var/folders/29/xbyl9pd540bgdh671qg6grhm0000gn/T/postman-http-request-post-response.instructions.md": true,
     "/var/folders/29/xbyl9pd540bgdh671qg6grhm0000gn/T/postman-http-request-pre-request.instructions.md": true
-  }
+  },
+  "python.analysis.typeCheckingMode": "basic",
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4o-mini",
+  "editor.largeFileOptimizations": false
 }
