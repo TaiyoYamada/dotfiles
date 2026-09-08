@@ -2,11 +2,26 @@
   "permissions": {
     "defaultMode": "auto"
   },
+  "model": "opus[1m]",
   "enabledPlugins": {
     "swift-lsp@claude-plugins-official": true,
     "vercel@claude-plugins-official": true
   },
-  "effortLevel": "xhigh",
+  "effortLevel": "high",
+  "modelSettings": {
+    "claude-fable-5": {
+      "effortLevel": "high"
+    },
+    "claude-opus-5": {
+      "effortLevel": "high"
+    },
+    "claude-sonnet-5": {
+      "effortLevel": "high"
+    },
+    "claude-fable-5-1": {
+      "effortLevel": "high"
+    }
+  },
   "tui": "fullscreen",
   "skipWorkflowUsageWarning": true,
   "theme": "dark",

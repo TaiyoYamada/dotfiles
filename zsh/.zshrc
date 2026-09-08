@@ -39,3 +39,15 @@ autoload -Uz compinit && compinit -C
 
 # kimi-code
 export PATH="/Users/yamadataiyou/.kimi-code/bin:$PATH"
+
+# study の補完
+_study() {
+  local -a commands
+  commands=(add append search cat list move done orphans sync open init completion help)
+  if (( CURRENT == 2 )); then
+    compadd -- ${commands[@]}
+  else
+    compadd -- ${(f)"$(study __slugs 2>/dev/null)"}
+  fi
+}
+compdef _study study
