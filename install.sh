@@ -47,6 +47,8 @@ backup_and_link "$DOTFILES_DIR/config/nvim" "$HOME/.config/nvim"
 backup_and_link "$DOTFILES_DIR/config/lazygit/config.yml" "$HOME/Library/Application Support/lazygit/config.yml"
 backup_and_link "$DOTFILES_DIR/config/gh/config.yml" "$HOME/.config/gh/config.yml"
 backup_and_link "$DOTFILES_DIR/claude/settings.json" "$HOME/.claude/settings.json"
+backup_and_link "$DOTFILES_DIR/claude/CLAUDE.md" "$HOME/.claude/CLAUDE.md"
+backup_and_link "$DOTFILES_DIR/claude/skills/study" "$HOME/.claude/skills/study"
 backup_and_link "$DOTFILES_DIR/vscode/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
 
 if [[ ! -f "$HOME/.gitconfig.local" ]]; then
