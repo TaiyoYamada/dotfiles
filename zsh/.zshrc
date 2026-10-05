@@ -31,14 +31,7 @@ command -v zoxide >/dev/null 2>&1 && eval "$(zoxide init zsh)"
 # Machine-specific settings and secrets belong here, outside Git.
 [[ -f "$HOME/.zshrc.local" ]] && source "$HOME/.zshrc.local"
 
-# >>> grok installer >>>
-export PATH="$HOME/.grok/bin:$PATH"
-fpath=(~/.grok/completions/zsh $fpath)
 autoload -Uz compinit && compinit -C
-# <<< grok installer <<<
-
-# kimi-code
-export PATH="/Users/yamadataiyou/.kimi-code/bin:$PATH"
 
 # study の補完
 _study() {
