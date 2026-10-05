@@ -3,6 +3,11 @@
     "defaultMode": "auto"
   },
   "model": "opus",
+  "attribution": {
+    "commit": "",
+    "pr": "",
+    "sessionUrl": false
+  },
   "enabledPlugins": {
     "swift-lsp@claude-plugins-official": true,
     "vercel@claude-plugins-official": true
