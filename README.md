@@ -37,6 +37,9 @@ file is tracked by this repository.
 VS Code settings intentionally exclude temporary paths, account data, and
 project identifiers. The extension list is stored in `vscode/extensions.txt`.
 
+Karabiner-Elements rewrites `karabiner.json` on save, so `~/.config/karabiner`
+is linked as a directory; its `automatic_backups/` are ignored.
+
 Only `config.yml` is tracked for gh; `~/.config/gh/hosts.yml` holds
 authentication tokens and stays out of the repository. Git uses delta as
 its pager, so `git-delta` (installed via the Brewfile) is expected on PATH.
@@ -56,3 +59,6 @@ Run the same checks used by GitHub Actions:
 ```sh
 ./check.sh
 ```
+
+Lua files are checked with `luac` (the `lua` formula in the Brewfile); the
+check is skipped when it is not installed.
