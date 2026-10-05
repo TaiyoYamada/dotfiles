@@ -16,6 +16,8 @@ if command -v luac >/dev/null 2>&1; then
   while IFS= read -r -d '' file; do
     luac -p "$file"
   done < <(find config/nvim config/wezterm -type f -name '*.lua' -print0)
+else
+  printf 'luac not found; skipping Lua syntax checks.\n' >&2
 fi
 
 git diff --check

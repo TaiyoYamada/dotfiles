@@ -12,5 +12,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v6
+      - name: Install Lua
+        run: brew install lua
       - name: Validate configuration
         run: ./check.sh
