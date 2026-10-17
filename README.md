@@ -1,7 +1,7 @@
 # dotfiles
 
 Personal macOS development environment for Zsh, Git, Starship, WezTerm,
-Karabiner-Elements, Neovim (LazyVim), VS Code, lazygit, gh, Claude Code,
+Karabiner-Elements, Neovim (LazyVim), VS Code, lazygit, gh,
 and macOS defaults. Shell tooling includes fzf, zoxide, and git-delta.
 
 ## Setup
@@ -39,6 +39,9 @@ project identifiers. The extension list is stored in `vscode/extensions.txt`.
 
 Karabiner-Elements rewrites `karabiner.json` on save, so `~/.config/karabiner`
 is linked as a directory; its `automatic_backups/` are ignored.
+
+Claude Code and Codex settings live in the separate `agent-harness`
+repository, which links them into `~/.claude` and `~/.codex`.
 
 Only `config.yml` is tracked for gh; `~/.config/gh/hosts.yml` holds
 authentication tokens and stays out of the repository. Git uses delta as
