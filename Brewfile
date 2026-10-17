@@ -26,6 +26,7 @@ brew "mecab-ipadic"
 brew "mint"
 brew "mkcert"
 brew "neovim"
+brew "node"
 brew "oven-sh/bun/bun", trusted: true
 brew "p7zip"
 brew "periphery"
